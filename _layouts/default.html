@@ -5,13 +5,36 @@ title: Home
 <html lang="en">
   {% include head.html %}
   <body>
+    <div class="loader" id="loader">
+      <div class="logo">
+        <div class="T">
+          <div class="one"></div>
+          <div class="two"></div>
+        </div>
+        <div class="N">
+          <div class="three"></div>
+
+          <div class="five"></div>
+        </div>
+      </div>
+    </div>
+
     {% include header.html %}
+    <div class="container">
+    <div class="socials">
+      <i class="fab fa-dribbble fa-2x"></i>
+      <i class="fab fa-github fa-2x"></i>
+      <i class="fab fa-codepen fa-2x"></i>
+      <i class="fab fa-linkedin fa-2x"></i>
+    </div>
     <main class="page-content" aria-labrl="Content">
       <div class="wrapper">
           {{ content }}
       </div>
 
     </main>
+    </div>
     {% include footer.html %}
+
   </body>
 </html>

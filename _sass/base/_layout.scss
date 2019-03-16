@@ -25,16 +25,23 @@ body {
   min-height: 100vh;
   flex-direction: column; }
 
+.container {
+  display: flex;
+  width: 100%;
+}
+
+
+
 /**
  * Wrapper
  */
-.wrapper {
+.wrapper, .container {
   max-width: -webkit-calc(100vw - (#{$space-xxl} * 2));
   max-width: calc(100vw - (#{$space-xxl}  * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
 
   @media screen and (max-width: 800px) {
     .wrapper {

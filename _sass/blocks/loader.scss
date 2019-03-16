@@ -1,0 +1,171 @@
+$duration: 1.5s;
+$timing-function: cubic-bezier(.41,.02,.39,.71);
+$delay: 1.5s;
+$fill-mode: forwards;
+$const: 9.2268431001px;
+
+.loader {
+  background-color: white;
+    height: 100%;
+    width: 100%;
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  z-index: 9;
+  animation: $duration 4.5s $timing-function $fill-mode loader;
+  opacity: 1;
+  pointer-events: none;
+
+  & > * {
+    animation: $duration 4s $timing-function $fill-mode loader;
+  }
+ }
+
+:root {
+
+}
+
+.logo {
+  position: relative;
+  height: (16 * $const);
+  width: (25 * $const);
+  margin: (10 * $const) auto 0;
+  z-index: 99;
+
+
+  & .T {
+    display: inline-flex;
+    vertical-align: baseline;
+
+    & .one,
+    .two {
+      background-color: black;
+      margin-top: 0;
+      height: (16 * $const);
+      width: (4.1 * $const);
+      animation: $duration $delay $timing-function $fill-mode T;
+
+      &:first-child {
+        margin-right: 0;
+        animation: $duration $delay $timing-function $fill-mode one;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+        animation: $duration $delay $timing-function $fill-mode two;
+      }
+    }
+  }
+
+  & .N {
+    display: inline-flex;
+    height: 100%;
+    margin-left: -5px;
+
+    & .three {
+      background-color: black;
+      width: (6.4 * $const);
+      animation: $duration $delay $timing-function $fill-mode three;
+    }
+
+    & .five {
+      background: white;
+      position: relative;
+      right: 0;
+      width: (3.2 * $const);
+      height: 110%;
+      transform: skew(0);
+      animation: $duration $delay $timing-function $fill-mode N;
+    }
+  }
+}
+
+@keyframes T{
+  0% {
+    margin-top: 0;
+  }
+  75% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: (4.2 * $const);
+  }
+}
+
+@keyframes one {
+  0% {
+    height: (16 * $const);
+  }
+  25% {
+    margin-right: (3.5 * $const);
+  }
+  75% {
+    height: (16 * $const);
+    margin-right: (3.5 * $const);
+  }
+  100% {
+    height: (12.85 * $const);
+    margin-right: (3.5 * $const);
+  }
+}
+
+@keyframes two {
+  0% {
+    height: (16 * $const);
+    margin-right: 0;
+  }
+
+  25% {
+    margin-right: (2.8 * $const);
+  }
+
+  75% {
+    height: (16 * $const);
+    margin-right: (2.8 * $const);
+  }
+  100% {
+    height: (12.85 * $const);
+    margin-right: (2.8 * $const);
+  }
+}
+
+@keyframes N {
+  0% {
+    right: 0;
+    transform: skew(0);
+  }
+  75% {
+    right: 0;
+    transform: skew(0);
+  }
+  100% {
+    right: (4.4 * $const);
+    transform: skew(27deg);
+  }
+}
+
+@keyframes three{
+  0% {
+    width: (8 * $const);
+  }
+  25% {
+    width: (6.2 * $const);
+  }
+  100% {
+    width: (6.2 * $const);
+  }
+}
+
+@keyframes loader{
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -7,6 +7,7 @@
 @import "abstracts/variables";
 @import "abstracts/utilities";
 
+
 //Base
 @import "base/base";
 @import "base/layout";
@@ -14,6 +15,10 @@
 @import "base/typography";
 
 
+
 //Blocks
 @import "blocks/card";
 @import "blocks/feed";
+@import "blocks/loader";
+@import "blocks/logo-svg";
+@import "blocks/socials";
