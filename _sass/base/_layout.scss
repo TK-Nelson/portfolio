@@ -28,6 +28,7 @@ body {
 .container {
   display: flex;
   width: 100%;
+  height: calc(100vh - 3.8rem);
 }
 
 
@@ -40,8 +41,8 @@ body {
   max-width: calc(100vw - (#{$space-xxl}  * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-right: $space-lg;
+  padding-left: $space-lg }
 
   @media screen and (max-width: 800px) {
     .wrapper {

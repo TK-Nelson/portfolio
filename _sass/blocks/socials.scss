@@ -2,5 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-bottom: $space-lg;
+  align-items: center;
 
+  & > * {
+    padding: $space-xs 0;
+  }
 }
