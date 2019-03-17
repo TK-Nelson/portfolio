@@ -4,8 +4,13 @@
   justify-content: flex-end;
   padding-bottom: $space-lg;
   align-items: center;
+  width: 42px;
 
   & > * {
-    padding: $space-xs 0;
+    padding: $space-sm 0;
   }
+}
+
+.fa-2x {
+  font-size: 1.5rem;
 }
