@@ -11,6 +11,8 @@ dl, dd, ol, ul, figure {
 
 .home {
   flex-grow: 1;
+  position: relative;
+  height: 100%;
 }
 
 /**

@@ -17,8 +17,8 @@ layout: default_loader
     {%- if site.posts.size > 0 -%}
       <h2 class="post-list-heading">{{ page.list_title | default: "Latest Articles" }}</h2>
       <section id="feed">
-        <ul class="card-list feed">
-          {%- for post in site.posts -%}
+        <ul class="card-list feed-front">
+          {%- for post in site.posts limit:4-%}
           <li class="card">
             <a href="{{ post.url | relative_url }}" class="card-link">
 
@@ -30,24 +30,16 @@ layout: default_loader
 
               <div class="card-body">
 
-                <h3 class="u-ta-c card-title u-m-n-t u-m-sm-b">
+                <h3 class="card-title u-m-n-t u-m-md-b">
                     {{ post.title | escape }}
                 </h3>
 
-                <h5 class="u-ta-c u-m-lg-b">
-                    {{ post.origin| default:  '&mdash;' }}
-                </h5>
-
-                <div class="card-tags u-ta-c">
-
+                <div class="card-tags">
                     {%- for cat in post.categories -%}
                       <span class="card-tag">{{cat}}</span>
                     {%- endfor -%}
-
                 </div>
-                  {%- if site.show_excerpts -%}
-                    {{ post.excerpt }}
-                  {%- endif -%}
+
 
               </div>
             </a>
@@ -63,10 +55,14 @@ layout: default_loader
           </li>
           {%- endfor -%}
         </ul>
+
+        <div class="arrows">
+          <i class="fas fa-angle-left fa-3x"></i>
+          <i class="fas fa-angle-right fa-3x"></i>
+        </div>
       </section>
 
-
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
     {%- endif -%}
   </div>
   <!-- Loader Script -->
