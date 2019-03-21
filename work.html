@@ -1,0 +1,55 @@
+---
+layout: default
+permalink: /work/
+---
+
+{%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Latest Articles" }}</h2>
+  <section id="feed">
+    <ul class="card-list feed-front">
+      {%- for post in site.posts -%}
+      <li class="card">
+        <a href="{{ post.url | relative_url }}" class="card-link">
+
+          <div class="card-photo">
+            {%- if post.image -%}
+              <img src="../assets/images/{{post.image}}.png" />
+            {%- endif -%}
+          </div>
+
+          <div class="card-body">
+
+            <h3 class="card-title u-m-n-t u-m-md-b">
+                {{ post.title | escape }}
+            </h3>
+
+            <div class="card-tags">
+                {%- for cat in post.categories -%}
+                  <span class="card-tag">{{cat}}</span>
+                {%- endfor -%}
+            </div>
+
+
+          </div>
+        </a>
+
+        <div class="card-footer">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="card-meta u-f">
+            <h5 class="u-m-n-b">
+              <i class="far fa-clock u-p-xs-r"></i>{{post.date | date: date_format }}
+            </h5>
+          </span>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class="arrows">
+      <i class="fas fa-angle-left fa-3x"></i>
+      <i class="fas fa-angle-right fa-3x"></i>
+    </div>
+  </section>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+{%- endif -%}
