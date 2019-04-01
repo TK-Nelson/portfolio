@@ -23,12 +23,23 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+}
 
 .container {
   display: flex;
+    flex-direction: column;
   width: 100%;
-  height: calc(100vh - 3.8rem);
+  height: 100vh;
+  padding-left: calc(#{$space-xxl} * 2);
+  padding-right: $space-md;
+}
+
+.right-bar {
+  // padding: $space-sm;
+  position: fixed;
+  text-align: center;
+  height: 100%;
+  width: 65px;
 }
 
 .intro-info {
@@ -49,19 +60,21 @@ body {
  }
 
 .wrapper, .container {
-  max-width: -webkit-calc(100vw - (#{$space-xxl} * 2));
-  max-width: calc(100vw - (#{$space-xxl}  * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $space-lg;
-  padding-left: $space-lg }
+  max-width: -webkit-calc(100vw - (65px));
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+ }
 
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(800px - (#{$space-xxl} ));
       max-width: calc(800px - (#{$space-xxl} ));
       padding-right: #{$space-md} ;
-      padding-left: #{$space-md} ; } }
+      padding-left: #{$space-md} ;
+     }
+    }
 
 /**
  * Clearfix
