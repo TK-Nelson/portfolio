@@ -23,12 +23,22 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+}
 
 .container {
   display: flex;
+    flex-direction: column;
   width: 100%;
-  height: calc(100vh - 3.8rem);
+  height: 100vh;
+  padding-left: $space-xxxl;
+}
+
+.right-bar {
+  // padding: $space-sm;
+  position: fixed;
+  text-align: center;
+  height: 100%;
+  width: 65px;
 }
 
 .intro-info {
@@ -50,11 +60,12 @@ body {
 
 .wrapper, .container {
   max-width: -webkit-calc(100vw - (#{$space-xxl} * 2));
-  max-width: calc(100vw - (#{$space-xxl}  * 2));
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
   padding-right: $space-lg;
-  padding-left: $space-lg }
+  padding-left: $space-xxxl;
+ }
 
   @media screen and (max-width: 800px) {
     .wrapper {
