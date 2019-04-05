@@ -19,7 +19,7 @@ layout: default
     {{ content }}
 
     {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">{{ page.list_title | default: "Latest Articles" }}</h2>
+
       <section id="feed">
         <ul class="card-list feed-front">
           {%- for post in site.posts limit:4-%}
@@ -27,25 +27,29 @@ layout: default
             <a href="{{ post.url | relative_url }}" class="card-link">
 
               <div class="card-photo">
+                <div class="overlay-wrapper">
+                  <div class="card-body">
+
+                    <h3 class="card-title u-m-n-t u-m-b-md">
+                        {{ post.title | escape }}
+                    </h3>
+
+                    <div class="card-tags">
+                        {%- for cat in post.categories -%}
+                          <span class="card-tag">{{cat}}</span>
+                        {%- endfor -%}
+                    </div>
+
+
+                  </div>
+                </div>
+
                 {%- if post.image -%}
                   <img src="assets/images/{{post.image}}.png" />
                 {%- endif -%}
               </div>
 
-              <div class="card-body">
 
-                <h3 class="card-title u-m-n-t u-m-md-b">
-                    {{ post.title | escape }}
-                </h3>
-
-                <div class="card-tags">
-                    {%- for cat in post.categories -%}
-                      <span class="card-tag">{{cat}}</span>
-                    {%- endfor -%}
-                </div>
-
-
-              </div>
             </a>
 
             <!-- <div class="card-footer">

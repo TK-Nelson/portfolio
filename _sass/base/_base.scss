@@ -10,9 +10,7 @@ dl, dd, ol, ul, figure {
 
 
 .home {
-  flex-grow: 1;
   position: relative;
-  height: 100%;
 }
 
 /**
@@ -259,8 +257,8 @@ table {
  * Page content
  */
 .page-content {
-  padding: 1.5rem 0;
-  flex: 1; }
+
+ }
 
 .page-heading {
   font-size: 32px; }
