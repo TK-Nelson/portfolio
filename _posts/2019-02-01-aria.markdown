@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: case_study
 title:  "Aria - Inventory Management App"
 date:   2019-01-31 14:19:36 -0500
 categories: jekyll update

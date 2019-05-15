@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "Sustainabiliy"
+layout: case_study
+title:  "OSU Sustainabiliy Concept"
 date:   2017-01-09 14:19:36 -0500
 categories: jekyll update
-image: project-sustainability/sustainability.jpg"
+image: project-sustainability/sustainability
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

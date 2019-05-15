@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Mining Pool UI Concept"
+layout: case_study
+title:  "Mining Pool UI"
 date:   2018-01-08 14:19:36 -0500
 categories: jekyll update
 image: project-mining/featured
