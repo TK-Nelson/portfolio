@@ -1,0 +1,22 @@
+.case-study {
+
+  margin: 5% 0 5%;
+
+  &__header {
+    height: 65vh;
+    background-size: cover;
+  }
+
+  &__summary{
+    display: flex;
+
+    &-intro {
+      flex: 2;
+    }
+
+    &-skills{
+      flex: 1;
+      
+    }
+  }
+}
