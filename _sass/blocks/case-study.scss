@@ -1,6 +1,6 @@
 .case-study {
-
   margin: 5% 0 5%;
+
 
   &__header {
     height: 65vh;
@@ -9,14 +9,20 @@
 
   &__summary{
     display: flex;
+    justify-content: space-between;
+    margin: 30px 0px 120px;
 
     &-intro {
-      flex: 2;
+      width: 70%;
     }
 
     &-skills{
-      flex: 1;
-      
+      width: 20%;
+
+    }
+
+    & h3 {
+      margin-top: 0px;
     }
   }
 }
