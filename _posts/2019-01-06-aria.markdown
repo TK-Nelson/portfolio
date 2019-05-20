@@ -1,8 +1,8 @@
 ---
 layout: case_study
-title:  "Aria"
-subtitle: "Inventory Management App"
-date:   2019-01-31 14:19:36 -0500
+title:  "Aria - Inventory Management App"
+subtitle: "This is a test."
+date:   2019-03-04 14:19:36 -0500
 categories: jekyll update
 image:  "project-aria/about"
 skills: test, test 2, test 3
