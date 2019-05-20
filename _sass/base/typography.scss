@@ -24,6 +24,11 @@ h3 {
   letter-spacing: .5px;
 }
 
+h4 {
+  font-size: $space-lg;
+  font-weight: 300;
+}
+
 h5 {
   font-size: .8rem;
   text-transform: uppercase;
@@ -38,4 +43,8 @@ a {
 
 i {
   padding-right: $space-xs;
+}
+
+p {
+  margin-bottom: 25px;
 }
