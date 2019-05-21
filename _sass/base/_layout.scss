@@ -2,7 +2,7 @@
  * Basic styling
  */
 body {
-  font: 400 18px/1.5 -apple-system,
+  font: 300 18px/1.5 "Montserrat",
   BlinkMacSystemFont,
   "Segoe UI",
   Roboto,
@@ -24,9 +24,56 @@ body {
   min-height: 100vh;
 }
 
-.intro-info {
-  height: 35vh;
+.intro {
+  &-info {
+    height: 100vh;
+    display: flex;
+    position: relative;
+
+    * {
+       width: 100%;
+     }
+  }
+
+  &-left {
+    margin: auto 30px;
+
+    .hero-title {
+      animation-duration: 2s;
+      animation-name: fadeInUp;
+      will-change: opacity, transform;
+      animation-delay: .1s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.2,0.8,0.2,1);
+    }
+
+    .hero-subtitle {
+      animation-duration: 2s;
+      animation-name: fadeInUp;
+      will-change: opacity, transform;
+      animation-delay: .2s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.2,0.8,0.2,1);
+    }
+
+    .hero-btn {
+      animation-duration: 2s;
+      animation-name: fadeInUp;
+      will-change: opacity, transform;
+      animation-delay: .3s;
+      animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+      animation-fill-mode: both;
+    }
+  }
+
+  &-right {
+    margin: auto 0;
+  }
+
 }
+
+
+
 
 .post-feed {
   width: 100%;

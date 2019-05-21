@@ -4,18 +4,23 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-  font-size: 60px;
+  font-size: 70px;
   color: $black;
   line-height: 1.05;
-  margin-bottom: $space-md;
+  margin-bottom: $space-xl;
+  font-weight: 800;
 }
 
 h2 {
+  font-family: "roboto";
   font-size: 1.5em;
+  opacity: .8;
+  font-weight: 300;
+  margin-bottom: $space-xl;
+
 }
 
 h3 {
-  font: "DINWeb", "Helvetica Neue", "Helvetica", "Roboto", "Open-Sans", "sans-serif";
   font-size: $space-md;;
   font-weight: 600;
   margin-top: 6%;
