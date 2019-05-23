@@ -2,10 +2,8 @@
  * Basic styling
  */
 body {
-  font: 300 18px/1.5 "Montserrat",
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
+  font: 300 18px/1.5 "Roboto",
+  "Montserrat",
   Helvetica,
   Arial,
   sans-serif,
@@ -36,7 +34,7 @@ body {
   }
 
   &-left {
-    margin: auto 30px;
+    margin: auto 30px auto;
 
     .hero-title {
       animation-duration: 2s;
@@ -70,6 +68,34 @@ body {
     margin: auto 0;
   }
 
+}
+
+.about {
+  margin: 5% 0 5%;
+
+
+  &__header {
+    font-size: 40px
+  }
+
+  &__summary{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px 120px;
+
+    &-intro {
+      width: 70%;
+    }
+
+    &-skills{
+      width: 20%;
+
+    }
+
+    & h3 {
+      margin-top: 0px;
+    }
+  }
 }
 
 

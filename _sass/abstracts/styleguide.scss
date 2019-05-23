@@ -1,0 +1,17 @@
+.styleguide {
+height: 100vh;
+  &-nav {
+    display: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    flex: 2;
+    background-color: $off-white;
+    padding: $space-xl;
+
+  }
+
+  &-body {
+    flex: 3;
+  }
+}

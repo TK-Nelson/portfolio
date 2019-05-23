@@ -3,73 +3,98 @@ layout: default
 permalink: /
 ---
 
-<div class="home wrapper">
-  <div class="intro-info ">
-    <div class="intro-left">
-      <h1 class="hero-title fadeInUp">UX/UI Designer</h1>
-      <h2 class="hero-subtitle fadeInUp">I'm passionate about creating digital products that are a healthy combination of creativity and practicality. </h2>
-      <a href="/contact/" class="btn hero-btn btn-primary">Start a Project</a>
-      <a href="#work" class="btn hero-btn btn-secondary">See Work</a>
+<div class="wrapper">
+  <section id="hero">
+    <div class="intro-info ">
+      <div class="intro-left">
+        <h1 class="hero-title fadeInUp">UX/UI Designer</h1>
+        <h2 class="hero-subtitle fadeInUp">I'm passionate about creating digital products that are a healthy combination of creativity and practicality. </h2>
+        <a href="/contact/" class="btn hero-btn btn-primary">Start a Project</a>
+        <a href="#work" class="btn hero-btn btn-secondary">See My Work</a>
+      </div>
+      <div class="intro-left">
+        intro-right
+      </div>
+
     </div>
-    <div class="intro-left">
-      intro-right
-    </div>
+  </section>
 
-  </div>
 
-  <div class="post-feed wrapper">
-    {%- if page.title -%}
-      <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
+  <section id="about">
+      <div class="about">
+        <div class="about__summary">
+          <div class="about__content">
+            <h1 class="about__header">Hey, my name is Tiko Nelson.</h1>
+            <h4>About</h4>
+            <h5>About</h5>
+          </div>
+          <div class="case-study__summary-skills">
+            <h3>Follow Me</h3>
+            <ul>
+              <li><span></span><h6></h6></li>
+            </ul>
 
-    {{ content }}
+          </div>
+        </div>
 
-    {%- if site.posts.size > 0 -%}
+      </div>
 
-      <section id="feed">
-        <ul class="card-list feed-front">
-          {%- for post in site.posts limit:4 -%}
-          <li class="card">
-            <a href="{{ post.url | relative_url }}" class="card-link">
+  </section>
 
-              <div class="card-photo">
-                <div class="overlay-wrapper">
-                  <div class="card-body">
+  <section id="recent-work">
+    <div class="post-feed">
+      {%- if page.title -%}
+        <h1 class="page-heading">{{ page.title }}</h1>
+      {%- endif -%}
 
-                    <h3 class="card-title u-m-n-t u-m-b-md">
-                        {{ post.title | escape }}
-                    </h3>
+      {{ content }}
 
-                    <div class="card-tags">
-                        {%- for cat in post.categories -%}
-                          <span class="card-tag">{{cat}}</span>
-                        {%- endfor -%}
+      {%- if site.posts.size > 0 -%}
+      <h5 class="">Recent Work</h5>
+
+          <ul class="feed">
+            {%- for post in site.posts limit:4 -%}
+            <li class="card">
+              <a href="{{ post.url | relative_url }}" class="card-link">
+
+                <div class="card-photo">
+                  <div class="overlay-wrapper">
+                    <div class="card-body">
+
+                      <h3 class="card-title u-m-n-t u-m-b-md">
+                          {{ post.title | escape }}
+                      </h3>
+
+                      <div class="card-tags">
+                          {%- for cat in post.categories -%}
+                            <span class="card-tag">{{cat}}</span>
+                          {%- endfor -%}
+                      </div>
                     </div>
-
-
                   </div>
+
+                  {%- if post.image -%}
+                    <img src="assets/images/{{post.image}}.png" />
+                  {%- endif -%}
                 </div>
 
-                {%- if post.image -%}
-                  <img src="assets/images/{{post.image}}.png" />
-                {%- endif -%}
-              </div>
 
+              </a>
 
-            </a>
+              <!-- <div class="card-footer">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="card-meta u-f">
+                  <h5 class="u-m-n-b">
+                    <i class="far fa-clock u-p-xs-r"></i>{{post.date | date: date_format }}
+                  </h5>
+                </span>
+              </div> -->
+            </li>
+            {%- endfor -%}
+          </ul>
 
-            <!-- <div class="card-footer">
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <span class="card-meta u-f">
-                <h5 class="u-m-n-b">
-                  <i class="far fa-clock u-p-xs-r"></i>{{post.date | date: date_format }}
-                </h5>
-              </span>
-            </div> -->
-          </li>
-          {%- endfor -%}
-        </ul>
-      </section>
+  </section>
+
 
       <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
     {%- endif -%}
