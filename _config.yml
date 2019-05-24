@@ -34,7 +34,7 @@ sass:
     sass_dir: _sass
 
 collections:
-  pages:
+  work:
     output: true
     permalink: /:collection/:path/
 # Exclude from processing.
