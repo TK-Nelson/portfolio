@@ -1,0 +1,18 @@
+.styleguide {
+height: 100vh;
+position: fixed;
+  top: 67px;
+  bottom: 0;
+  left: 0;
+  &-nav {
+    flex: 2;
+    background-color: $off-white;
+    padding: $space-xl $space-lg;
+
+  }
+
+  &-body {
+    flex: 3;
+    padding: $space-xl $space-lg;
+  }
+}

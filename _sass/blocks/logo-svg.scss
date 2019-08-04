@@ -1,5 +1,20 @@
 
+.logo-image {
+  display: inline-flex;
+  margin-top: 5px;
+
+}
+
 svg {
   height: 2rem;
   width: auto;
+  margin-right: 10px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-decoration: none;
+  color: #000;
 }

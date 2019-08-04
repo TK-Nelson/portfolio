@@ -4,17 +4,23 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-
+  font-size: 70px;
   color: $black;
-  line-height: 1.3em;
+  line-height: 1.05;
+  margin-bottom: $space-xl;
+  font-weight: 800;
 }
 
 h2 {
+  font-family: "roboto";
   font-size: 1.5em;
+  opacity: .8;
+  font-weight: 300;
+  margin-bottom: $space-xl;
+
 }
 
 h3 {
-  font: "DINWeb", "Helvetica Neue", "Helvetica", "Roboto", "Open-Sans", "sans-serif";
   font-size: $space-md;;
   font-weight: 600;
   margin-top: 6%;
@@ -23,9 +29,16 @@ h3 {
   letter-spacing: .5px;
 }
 
+h4 {
+  font-size: $space-lg;
+  font-weight: 300;
+}
+
 h5 {
   font-size: .8rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: .3;
 }
 
 a {
@@ -37,4 +50,11 @@ a {
 
 i {
   padding-right: $space-xs;
+}
+
+p {
+  margin-bottom: 25px;
+  &.lg {
+    font-size: 21px;
+  }
 }

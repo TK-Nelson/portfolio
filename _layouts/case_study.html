@@ -6,21 +6,35 @@ title: Case Study Template
 <html lang="en">
   {% include head.html %}
   <body>
-
     {% include header.html %}
     <div class="container">
-    <div class="socials">
-      <a href="https://www.dribbble.com/tikonelson"><i class="fab fa-dribbble fa-2x"></i></a>
-      <a href="https://www.github.com/blksheep93"><i class="fab fa-github fa-2x"></i></a>
-      <a href="https://codepen.io/Blksheep93/"><i class="fab fa-codepen fa-2x"></i></a>
-      <a href="https://www.linkedin.com/in/tikonelson"><i class="fab fa-linkedin fa-2x"></i></a>
-    </div>
-    <main class="page-content" aria-labrl="Content">
-      <div class="wrapper">
-          {{ content }}
-      </div>
 
-    </main>
+      <main class="page-content" aria-labrl="Content">
+        <div class="wrapper">
+
+          <div class="case-study">
+            <h1>{{page.title}}</h1>
+            <h4>{{page.subtitle}}</h4>
+            <div class="case-study__summary">
+
+              <div class="case-study__summary-intro">
+                <h3>About</h3>
+                {{ content }}
+              </div>
+              <div class="case-study__summary-skills">
+                <h3>Responsabilities</h3>
+                {{ page.skills }}
+              </div>
+            </div>
+
+          </div>
+
+            <div class="case-study__header" style="background-image: url({{site.baseurl}}/assets/images/{{ page.image }}.png)">
+
+            </div>
+        </div>
+
+      </main>
     </div>
     <!-- {% include footer.html %} -->
 

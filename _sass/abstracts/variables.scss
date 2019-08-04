@@ -6,10 +6,10 @@ $gray-lighter: #d0d3d5;
 $gray-lightest: #e5e8e9;
 $white: #ffffff;
 
-$off-white: #f2f5f8;
+$off-white: #f7f5fb;;
 
-$prim-blue: #69c3e2;
-$prim-blue2: darken(#69c3e2, 20%);
+$prim-blue: #3340ff;
+$prim-blue2: darken($prim-blue, 20%);
 $prim-yellow: #f4d544;
 $prim-red: #f27165;
 
