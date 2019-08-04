@@ -34,7 +34,7 @@ body {
   }
 
   &-left {
-    margin: auto 30px auto;
+    margin: auto 30px auto 0px;
 
     .hero-title {
       animation-duration: 2s;
@@ -75,7 +75,7 @@ body {
 
 
   &__header {
-    font-size: 40px
+    font-size: 40px;
   }
 
   &__summary{
@@ -83,18 +83,33 @@ body {
     justify-content: space-between;
     margin: 30px 0px 120px;
 
-    &-intro {
-      width: 70%;
-    }
 
     &-skills{
       width: 20%;
-
     }
 
     & h3 {
       margin-top: 0px;
     }
+  }
+
+  &__social {
+    min-width: 20%;
+    & ul {
+      list-style: none;
+
+      & li > a > *{
+        display: inline-block;
+      }
+
+      & li > i {
+        padding-right: $space-md;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 600px;
   }
 }
 
